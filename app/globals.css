@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@keyframes whatsappPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.35;
+  }
+  50% {
+    transform: scale(1.16);
+    opacity: 0;
+  }
+}
+
+.whatsapp-pulse {
+  animation: whatsappPulse 2.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .whatsapp-pulse {
+    animation: none;
+    opacity: 0;
+  }
+}

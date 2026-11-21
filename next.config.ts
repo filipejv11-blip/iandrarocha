@@ -2,6 +2,13 @@ import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  allowedDevOrigins: [
+    '**.run.app',
+    '**.googleusercontent.com',
+    '**.google.com',
+    'localhost',
+    '127.0.0.1',
+  ],
   typescript: {
     ignoreBuildErrors: false,
   },
